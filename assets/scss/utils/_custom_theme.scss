@@ -1,0 +1,54 @@
+$primary-colors: (
+  "primary-97": #F1F4FD,
+  "primary-90": #D2D9F9,
+  "primary-80": #A4B4F3,
+  "primary-70": #778EEE,
+  "primary-60": #4A69E8,
+  "primary-40": #1736B5,
+  "primary-25": #0E2271,
+);
+
+$secondary-colors: (
+  "secondary-90": #D7F4EC,
+  "secondary-70": #87DEC5,
+  "secondary-50": #36C99F,
+  "secondary-35": #268C6F,
+);
+
+$natural-colors: (
+  "natural-95": #F0F3F5,
+  "natural-90": #E0E5EB,
+  "natural-85": #D1D9E1,
+  "natural-75": #B2BFCC,
+  "natural-60": #8599AD,
+  "natural-50": #667F99,
+  "natural-30": #3D4D5C,
+  "natural-10": #141A1F,
+);
+
+$alpha-colors: (
+  "alpha-100": rgba(20, 26, 31, .6),
+);
+
+$success-colors: (
+  "success-90": #DEFCCF,
+  "success-40": #47C20A,
+  "success-30": #369108,
+);
+
+$danger-colors: (
+  "danger-100": #FFD0CC,
+  "danger-90": #FFEACC,
+  "danger-70": #FF7467,
+  "danger-48": #F58F00,
+  "danger-45": #E51300,
+  "danger-35": #B26800,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $primary-colors);
+$theme-colors: map-merge($theme-colors, $secondary-colors);
+$theme-colors: map-merge($theme-colors, $natural-colors);
+$theme-colors: map-merge($theme-colors, $alpha-colors);
+$theme-colors: map-merge($theme-colors, $success-colors);
+$theme-colors: map-merge($theme-colors, $danger-colors);
