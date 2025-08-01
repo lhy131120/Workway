@@ -1,0 +1,21 @@
+header {
+  .navbar-nav {
+    --bs-nav-link-color: var(--bs-dark)
+  }
+
+  .navbar-toggler {
+    border-radius: .5rem;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      background-color: var(--bs-natural-75);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  
+
+}
