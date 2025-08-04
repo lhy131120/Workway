@@ -3,16 +3,33 @@ header {
     --bs-nav-link-color: var(--bs-dark)
   }
 
-  .navbar-toggler {
-    border-radius: .5rem;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  .navbar-brand svg{
+    @include media-breakpoint-down(lg) {
+      max-width: 92px;
+      height: auto;
+    }
+  }
 
+  .navbar-toggler {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    transition: all .3s ease-out;
+    
     &:hover {
       background-color: var(--bs-natural-75);
     }
-
+    
     &:focus {
       box-shadow: none;
+    }
+    
+    .navbar-toggler-icon {
+      position: relative;
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 
