@@ -10,6 +10,17 @@
   -o-box-shadow: 0px 0px 16px 16px rgba(0,0,0,0.12);
 }
 
+form {
+  .form-check-label {
+    font-size: 0.875rem;
+  }
+  .form-floating > label,p {
+    @include media-breakpoint-down(lg) {
+      font-size: 0.875rem;
+    }
+  }
+}
+
 // custom from style
 .form-check {
   display: flex;
@@ -65,7 +76,7 @@
   }
 }
 
-// text-area
+// common form-control
 .form-control {
   padding: 1rem .75rem;
   background-color: var(--bs-light);
@@ -78,6 +89,21 @@
   &::placeholder {
     background-color: var(--bs-light);
   }
+}
+
+// text-area
+.form-floating > textarea:focus ~ label::after, 
+.form-floating > textarea:not(:placeholder-shown) ~ label::after {
+  background-color: var(--bs-light);
+}
+
+// floating label
+.form-floating > .form-control, .form-floating > .form-control-plaintext {
+  padding: 1rem .75rem;
+}
+
+.form-floating > label {
+  padding: 1rem .75rem;
 }
 
 // dropdown
@@ -98,6 +124,9 @@ form .dropdown {
     background-repeat: no-repeat;
     background-position: right 18px center;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    @include media-breakpoint-down(lg)  {
+      font-size: 0.875rem;
+    }
     &::after {
       content: none;
       border: none;
@@ -135,6 +164,9 @@ form .dropdown {
     justify-content: center;
     padding: .75rem 0;
     transition: all .3s ease;
+    @include media-breakpoint-down(lg) {
+      font-size: 0.875rem;
+    }
 
     &:before {
       content: '';
@@ -165,6 +197,7 @@ form .dropdown {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 12px 12px 12px 20px;
   line-height: 1.2;
 
