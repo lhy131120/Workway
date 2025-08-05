@@ -22,12 +22,12 @@
                   aria-selected="true">個人資料</button>
               </li>
               <li class="nav-item px-2 px-lg-3" role="presentation">
-                <button class="nav-link withIcon appointment" id="pills-appointment-tab" data-bs-toggle="pill"
+                <button class="nav-link withIcon appointment active" id="pills-appointment-tab" data-bs-toggle="pill"
                   data-bs-target="#pills-appointment" type="button" role="tab" aria-controls="pills-appointment"
                   aria-selected="false">預約紀錄</button>
               </li>
               <li class="nav-item px-2 px-lg-3" role="presentation">
-                <button class="nav-link withIcon jobPlanning active" id="pills-jobPlanning-tab" data-bs-toggle="pill"
+                <button class="nav-link withIcon jobPlanning" id="pills-jobPlanning-tab" data-bs-toggle="pill"
                   data-bs-target="#pills-jobPlanning" type="button" role="tab" aria-controls="pills-jobPlanning"
                   aria-selected="false">職旅計劃</button>
               </li>
@@ -98,7 +98,7 @@
                                   </div>
                                   <div class="mb-4 mb-lg-6">
                                     <p class="mb-2">密碼</p>
-                                    <button type="submit" class="btn btn-light btn-icon">修改密碼</button>
+                                    <button type="button" class="btn btn-light btn-icon" id="changePassword">修改密碼</button>
                                   </div>
                                   <div class="mb-4 mb-lg-6">
                                     <div class="form-floating">
@@ -125,10 +125,10 @@
                           </ul>
                           <div class="row justify-content-center gy-4">
                             <div class="col-12 col-lg-auto order-2 order-lg-1">
-                              <button type="submit" class="btn btn-light btn-icon w-100 reset">重新填寫</button>
+                              <button type="button" class="btn btn-light btn-icon w-100 reset">重新填寫</button>
                             </div>
                             <div class="col-12 col-lg-auto order-1 order-lg-2">
-                              <button type="submit" class="btn btn-dark btn-icon w-100">儲存更新</button>
+                              <button type="button" class="btn btn-dark btn-icon w-100">儲存更新</button>
                             </div>
                           </div>
                         </form>
@@ -137,11 +137,46 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="pills-appointment" role="tabpanel" aria-labelledby="pills-appointment-tab"
+              <div class="tab-pane fade show active" id="pills-appointment" role="tabpanel" aria-labelledby="pills-appointment-tab"
                 tabindex="0">
-                預約紀錄
+                <div class="row justify-content-center">
+                  <div class="col-10">
+                    <div class="bg-light rounded-4 p-6 p-lg-9 common-shadow">
+                      <h2 class="fs-5 fs-lg-4 mb-4 mb-lg-6">預約紀錄</h2>
+                      <ul class="list-unstyled mb-6 mb-lg-9 row row-cols-lg-3 g-6">
+                        <li class="d-none d-lg-block col">
+                          <div class="border border-natural-85 rounded-4 p-4 p-lg-6 text-center">
+                            <span class="d-block mb-2 text-primary-60 fs-3 fs-lg-2 fw-bold">3</span>
+                            <span class="d-block text-natural-50 fs-7 fs-lg-6">已完成諮詢</span>
+                          </div>
+                        </li>
+                        <li class="col">
+                          <div class="border border-natural-85 rounded-4 p-4 p-lg-6 text-center">
+                            <span class="d-block mb-2 text-primary-60 fs-3 fs-lg-2 fw-bold">2025/10/10</span>
+                            <span class="d-block text-natural-50 fs-7 fs-lg-6">即將到來</span>
+                          </div>
+                        </li>
+                        <li class="d-none d-lg-block col">
+                          <div class="border border-natural-85 rounded-4 p-4 p-lg-6 text-center">
+                            <span class="d-block mb-2 text-primary-60 fs-3 fs-lg-2 fw-bold">3/6</span>
+                            <span class="d-block text-natural-50 fs-7 fs-lg-6">使用方案進度</span>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="d-flex justify-content-between">
+                        <div class="row row-col-3 gx-2">
+                          <div class="col-auto"><button class="btn btn-light border" type="button">全部預約</button></div>
+                          <div class="col-auto"><button class="btn btn-light border" type="button">已完成</button></div>
+                          <div class="col-auto"><button class="btn btn-light border" type="button">已取消</button></div>
+                        </div>
+                        <div>dsas</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
-              <div class="tab-pane fade show active" id="pills-jobPlanning" role="tabpanel"
+              <div class="tab-pane fade" id="pills-jobPlanning" role="tabpanel"
                 aria-labelledby="pills-jobPlanning-tab" tabindex="0">
                 <div class="row justify-content-center">
                   <div class="col-lg-10">
@@ -689,14 +724,37 @@
                       </ul>
                       <div class="row justify-content-center gy-4">
                         <div class="col-12 col-lg-auto order-2 order-lg-1">
-                          <button type="submit" class="btn btn-light btn-icon w-100">匯出 PDF</button>
+                          <button type="button" class="btn btn-light btn-icon w-100">匯出 PDF</button>
                         </div>
                         <div class="col-12 col-lg-auto order-1 order-lg-2">
-                          <button type="submit" class="btn btn-dark btn-icon w-100">儲存更新</button>
+                          <button type="button" class="btn btn-dark btn-icon w-100">儲存更新</button>
                         </div>
                       </div>
                     </form>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered mx-auto" style="max-width: 480px;">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 fw-medium" id="changePasswordModalLabel">更新密碼</h1>
+                  <button type="button" class="btn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-6">
+                  <form class="">
+                    <div class="form-floating mb-4 mb-lg-6">
+                      <input type="password" class="form-control" id="newPassword" placeholder="新密碼" ><label for="newPassword">新密碼</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="confirmNewPassword" placeholder="再次密碼" ><label for="confirmNewPassword">再次密碼</label>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer py-4 px-6">
+                  <button type="button" class="btn btn-dark btn-icon">更新密碼</button>
                 </div>
               </div>
             </div>

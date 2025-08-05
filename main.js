@@ -1,9 +1,10 @@
-// import * as bootstrap from 'bootstrap';
-import { Modal } from 'bootstrap';
+import * as bootstrap from 'bootstrap';
+// import { Modal } from 'bootstrap';
 
 import './assets/scss/all.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
+  
   document.addEventListener('click', e => {
     const item = e.target.closest('.dropdown-item');
     if (item) {
@@ -15,4 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  const changePassWordBtn = document.querySelector("#changePassword");
+  const changePassWordCloseBtn = document.querySelector("#changePasswordModal .btn-close");
+  const changePassWordModal = new bootstrap.Modal('#changePasswordModal', {
+    backdrop: 'static',
+    focus: true,
+    keyboard: false,
+
+  });
+
+  changePassWordBtn.addEventListener("click", e => {
+    changePassWordModal.show();
+  })
+
+  changePassWordCloseBtn.addEventListener('click', e => changePassWordModal.hide())
+
 });
