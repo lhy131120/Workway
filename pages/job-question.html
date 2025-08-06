@@ -36,111 +36,119 @@
               <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
                 tabindex="0">
                 <div class="row justify-content-center">
-                  <div class="col-10">
-                    <div class="row justify-content-center">
-                      <div class="col-lg-10">
-                        <form class="bg-light rounded-4 p-6 p-lg-9 common-shadow">
-                          <ul class="list-unstyled mb-0 d-flex flex-column">
-                    
-                            <li class="px-0">
-                              <div class="row">
-                                <div class="col-lg-4">
-                                  <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
-                                    <div class="w-lg-100 text-natural-10 fs-5 fs-lg-4 lh-sm fw-medium mb-0 mb-lg-3">個人資料</div>
-                                  </div>
+                  <div class="col-lg-10">
+                    <form class="bg-light rounded-4 p-6 p-lg-9 common-shadow">
+                      <ul class="list-unstyled mb-0 d-flex flex-column">
+
+                        <li class="px-0">
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
+                                <div class="w-lg-100 text-natural-10 fs-5 fs-lg-4 lh-sm fw-medium mb-0 mb-lg-3">個人資料
                                 </div>
-                                <div class="col-lg-8">
-                                  <div class="mb-4 mb-lg-6">
-                                    <div class="d-flex align-items-end">
-                                      <img class="d-block lh-0 me-4" src="/assets/images/user_pic.png" style="width: 120px;" alt="">
-                                      <div class="fileInput">
-                                        <label for="upload-personal-image" class="form-label">
-                                          <span>上傳檔案</span>
-                                          <input class="form-control " type="file" id="upload-personal-image" placeholder="更新頭貼">
-                                        </label>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="mb-4 mb-lg-6">
-                                    <div class="form-floating">
-                                      <input type="text" class="form-control" id="profile-name" placeholder="姓名" value="Mokumaru">
-                                      <label for="profile-name">姓名</label>
-                                    </div>
-                                  </div>
-                                  <div class="mb-4 mb-lg-6">
-                                    <p class="mb-2">性別</p>
-                                    <ul class="list-unstyled mb-0 row gy-2 gx-6">
-                                      <li class="col-auto">
-                                        <div class="form-check">
-                                          <input class="form-check-input" type="radio" name="profileSex" id="profileSexItem1" checked>
-                                          <label class="form-check-label" for="profileSexItem1">女性</label>
-                                        </div>
-                                      </li>
-                                      <li class="col-auto">
-                                        <div class="form-check">
-                                          <input class="form-check-input" type="radio" name="profileSex" id="profileSexItem2">
-                                          <label class="form-check-label" for="profileSexItem2">男性</label>
-                                        </div>
-                                      </li>
-                                      <li class="col-auto">
-                                        <div class="form-check">
-                                          <input class="form-check-input" type="radio" name="profileSex" id="profileSexItem3">
-                                          <label class="form-check-label" for="profileSexItem3">不願透露</label>
-                                        </div>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                  <div class="mb-4 mb-lg-6">
-                                    <div class="form-floating">
-                                      <input type="date" class="form-control" id="birthdate" name="birthdate" min="1800-01-01" max="2025-12-31" value="2000/01/10">
-                                      <label for="profile-birthday">生日</label>
-                                    </div>
-                                  </div>
-                                  <div class="mb-4 mb-lg-6">
-                                    <p class="mb-2">密碼</p>
-                                    <button type="button" class="btn btn-light btn-icon" id="changePassword">修改密碼</button>
-                                  </div>
-                                  <div class="mb-4 mb-lg-6">
-                                    <div class="form-floating">
-                                      <input type="eamil" class="form-control" id="profile-email" placeholder="信箱" value="mokumaru@mail.com">
-                                      <label for="profile-email">信箱</label>
-                                    </div>
-                                    <p class="mb-0 fs-8 text-natural-50">盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信</p>
-                                  </div>
-                                  <div class="mb-4 mb-lg-6">
-                                    <div class="form-floating">
-                                      <input type="tel" class="form-control" id="profile-phone" placeholder="聯絡電話" value="09-1234-5678">
-                                      <label for="profile-phone">聯絡電話</label>
-                                    </div>
-                                  </div>
-                                  <div class="mb-12 mb-lg-9">
-                                    <div class="form-floating">
-                                      <input type="tel" class="form-control" id="profile-address" placeholder="通訊地址" value="高雄市三民區九如一路 87 號">
-                                      <label for="profile-address">通訊地址</label>
-                                    </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-8">
+                              <div class="mb-4 mb-lg-6">
+                                <div class="d-flex align-items-end">
+                                  <img class="d-block lh-0 me-4" src="/assets/images/user_pic.png" style="width: 120px;"
+                                    alt="">
+                                  <div class="fileInput">
+                                    <label for="upload-personal-image" class="form-label">
+                                      <span>上傳檔案</span>
+                                      <input class="form-control " type="file" id="upload-personal-image"
+                                        placeholder="更新頭貼">
+                                    </label>
                                   </div>
                                 </div>
                               </div>
-                            </li>
-                          </ul>
-                          <div class="row justify-content-center gy-4">
-                            <div class="col-12 col-lg-auto order-2 order-lg-1">
-                              <button type="button" class="btn btn-light btn-icon w-100 reset">重新填寫</button>
-                            </div>
-                            <div class="col-12 col-lg-auto order-1 order-lg-2">
-                              <button type="button" class="btn btn-dark btn-icon w-100">儲存更新</button>
+                              <div class="mb-4 mb-lg-6">
+                                <div class="form-floating">
+                                  <input type="text" class="form-control" id="profile-name" placeholder="姓名"
+                                    value="Mokumaru">
+                                  <label for="profile-name">姓名</label>
+                                </div>
+                              </div>
+                              <div class="mb-4 mb-lg-6">
+                                <p class="mb-2">性別</p>
+                                <ul class="list-unstyled mb-0 row gy-2 gx-6">
+                                  <li class="col-auto">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="profileSex"
+                                        id="profileSexItem1" checked>
+                                      <label class="form-check-label" for="profileSexItem1">女性</label>
+                                    </div>
+                                  </li>
+                                  <li class="col-auto">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="profileSex"
+                                        id="profileSexItem2">
+                                      <label class="form-check-label" for="profileSexItem2">男性</label>
+                                    </div>
+                                  </li>
+                                  <li class="col-auto">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="profileSex"
+                                        id="profileSexItem3">
+                                      <label class="form-check-label" for="profileSexItem3">不願透露</label>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="mb-4 mb-lg-6">
+                                <div class="form-floating">
+                                  <input type="date" class="form-control" id="birthdate" name="birthdate"
+                                    min="1800-01-01" max="2025-12-31" value="2000/01/10">
+                                  <label for="profile-birthday">生日</label>
+                                </div>
+                              </div>
+                              <div class="mb-4 mb-lg-6">
+                                <p class="mb-2">密碼</p>
+                                <button type="button" class="btn btn-light btn-icon" id="changePassword">修改密碼</button>
+                              </div>
+                              <div class="mb-4 mb-lg-6">
+                                <div class="form-floating">
+                                  <input type="eamil" class="form-control" id="profile-email" placeholder="信箱"
+                                    value="mokumaru@mail.com">
+                                  <label for="profile-email">信箱</label>
+                                </div>
+                                <p class="mb-0 fs-8 text-natural-50">盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信</p>
+                              </div>
+                              <div class="mb-4 mb-lg-6">
+                                <div class="form-floating">
+                                  <input type="tel" class="form-control" id="profile-phone" placeholder="聯絡電話"
+                                    value="09-1234-5678">
+                                  <label for="profile-phone">聯絡電話</label>
+                                </div>
+                              </div>
+                              <div class="mb-12 mb-lg-9">
+                                <div class="form-floating">
+                                  <input type="tel" class="form-control" id="profile-address" placeholder="通訊地址"
+                                    value="高雄市三民區九如一路 87 號">
+                                  <label for="profile-address">通訊地址</label>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </form>
+                        </li>
+                      </ul>
+                      <div class="row justify-content-center gy-4">
+                        <div class="col-12 col-lg-auto order-2 order-lg-1">
+                          <button type="button" class="btn btn-light btn-icon w-100 reset">重新填寫</button>
+                        </div>
+                        <div class="col-12 col-lg-auto order-1 order-lg-2">
+                          <button type="button" class="btn btn-dark btn-icon w-100">儲存更新</button>
+                        </div>
                       </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade show active" id="pills-appointment" role="tabpanel" aria-labelledby="pills-appointment-tab"
-                tabindex="0">
+
+              <div class="tab-pane fade show active" id="pills-appointment" role="tabpanel"
+                aria-labelledby="pills-appointment-tab" tabindex="0">
                 <div class="row justify-content-center">
-                  <div class="col-10">
+                  <div class="col-lg-10">
                     <div class="bg-light rounded-4 p-6 p-lg-9 common-shadow">
                       <h2 class="fs-5 fs-lg-4 mb-4 mb-lg-6">預約紀錄</h2>
                       <ul class="list-unstyled mb-6 mb-lg-9 row row-cols-lg-3 g-6">
@@ -163,21 +171,99 @@
                           </div>
                         </li>
                       </ul>
-                      <div class="d-flex justify-content-between">
+                      <div class="d-flex justify-content-between align-items-center mb-4 mb-lg-6">
                         <div class="row row-col-3 gx-2">
-                          <div class="col-auto"><button class="btn btn-light border" type="button">全部預約</button></div>
-                          <div class="col-auto"><button class="btn btn-light border" type="button">已完成</button></div>
-                          <div class="col-auto"><button class="btn btn-light border" type="button">已取消</button></div>
+                          <div class="col-auto"><button class="btn btn-dark border lh-sm fs-8 fs-lg-7 p-3 px-lg-5"
+                              type="button">全部預約</button></div>
+                          <div class="col-auto"><button class="btn btn-light border lh-sm fs-8 fs-lg-7 p-3 px-lg-5"
+                              type="button">已完成</button></div>
+                          <div class="col-auto"><button class="btn btn-light border lh-sm fs-8 fs-lg-7 p-3 px-lg-5"
+                              type="button">已取消</button></div>
                         </div>
-                        <div>dsas</div>
+                        <div class="dropdown">
+                          <button class="btn border dropdown-toggle withIcon sort rounded-3 lh-sm fs-0 fs-lg-7"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">排序</button>
+                          <ul class="dropdown-menu w-100">
+                            <li><a class="dropdown-item" href="javascript:;" data-option="新到舊">新到舊</a></li>
+                            <li><a class="dropdown-item" href="javascript:;" data-option="舊到新">舊到新</a></li>
+                          </ul>
+                        </div>
                       </div>
+                      <table class="table-jobPlan table table-light table-striped table-hover w-100">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="w-100 w-lg-auto"><span class="d-none d-lg-block">諮詢方案</span><span
+                                class="d-block d-lg-none">預約紀錄一覽</span></th>
+                            <th scope="col" class="d-none d-lg-table-cell">預約日期</th>
+                            <th scope="col" class="d-none d-lg-table-cell">諮詢時長</th>
+                            <th scope="col" class="d-none d-lg-table-cell">諮詢方式</th>
+                            <th scope="col" class="d-none d-lg-table-cell">上課狀態</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="">
+                            <th scope="row" class="px-3 py-4 fw-normal">職涯定位-職涯探索包 | 6/6堂</th>
+                            <td class="px-3 py-4">2025/11/11</td>
+                            <td class="px-3 py-4">60分鐘</td>
+                            <td class="px-3 py-4"><span
+                                class="d-inline-block px-2 py-1 text-natural-50 bg-light text-natural-85 fs-8 border rounded-3 text-center">視訊</span>
+                            </td>
+                            <td class="px-3 py-4">等待上課</td>
+                          </tr>
+                          <tr class="">
+                            <th scope="row" class="px-3 py-4 fw-normal">職涯定位-職涯探索包 | 5/6堂</th>
+                            <td class="px-3 py-4">2025/10/10</td>
+                            <td class="px-3 py-4">60分鐘</td>
+                            <td class="px-3 py-4"><span
+                                class="d-inline-block px-2 py-1 text-natural-50 bg-light text-natural-85 fs-8 border rounded-3 text-center">視訊</span>
+                            </td>
+                            <td class="px-3 py-4">等待上課</td>
+                          </tr>
+                          <tr class="finish">
+                            <th scope="row" class="px-3 py-4 fw-normal">職涯定位-職涯探索包 | 4/6堂</th>
+                            <td class="px-3 py-4">2025/09/09</td>
+                            <td class="px-3 py-4">60分鐘</td>
+                            <td class="px-3 py-4"><span
+                                class="d-inline-block px-2 py-1 text-natural-50 bg-light text-natural-85 fs-8 border rounded-3 text-center">視訊</span>
+                            </td>
+                            <td class="px-3 py-4">己完成</td>
+                          </tr>
+                          <tr class="finish">
+                            <th scope="row" class="px-3 py-4 fw-normal">職涯定位-職涯探索包 | 3/6堂</th>
+                            <td class="px-3 py-4">2025/08/08</td>
+                            <td class="px-3 py-4">60分鐘</td>
+                            <td class="px-3 py-4"><span
+                                class="d-inline-block px-2 py-1 text-natural-50 bg-light text-natural-85 fs-8 border rounded-3 text-center">面對面</span>
+                            </td>
+                            <td class="px-3 py-4">己完成</td>
+                          </tr>
+                          <tr class="finish">
+                            <th scope="row" class="px-3 py-4 fw-normal">職涯定位-職涯探索包 | 2/6堂</th>
+                            <td class="px-3 py-4">2025/07/07</td>
+                            <td class="px-3 py-4">60分鐘</td>
+                            <td class="px-3 py-4"><span
+                                class="d-inline-block px-2 py-1 text-natural-50 bg-light text-natural-85 fs-8 border rounded-3 text-center">面對面</span>
+                            </td>
+                            <td class="px-3 py-4">己完成</td>
+                          </tr>
+                          <tr class="finish">
+                            <th scope="row" class="px-3 py-4 fw-normal">職涯定位-職涯探索包 | 1/6堂</th>
+                            <td class="px-3 py-4">2025/06/06</td>
+                            <td class="px-3 py-4">60分鐘</td>
+                            <td class="px-3 py-4"><span
+                                class="d-inline-block px-2 py-1 text-natural-50 bg-light text-natural-85 fs-8 border rounded-3 text-center">面對面</span>
+                            </td>
+                            <td class="px-3 py-4">己完成</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
-                
               </div>
-              <div class="tab-pane fade" id="pills-jobPlanning" role="tabpanel"
-                aria-labelledby="pills-jobPlanning-tab" tabindex="0">
+              
+              <div class="tab-pane fade" id="pills-jobPlanning" role="tabpanel" aria-labelledby="pills-jobPlanning-tab"
+                tabindex="0">
                 <div class="row justify-content-center">
                   <div class="col-lg-10">
                     <form class="bg-light rounded-4 p-6 p-lg-9 common-shadow">
@@ -186,7 +272,8 @@
                           <div class="row">
                             <div class="col-lg-4">
                               <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
-                                <div class="w-lg-100 text-natural-10 fs-5 fs-lg-4 lh-sm fw-medium mb-0 mb-lg-3">職旅計劃概況</div>
+                                <div class="w-lg-100 text-natural-10 fs-5 fs-lg-4 lh-sm fw-medium mb-0 mb-lg-3">職旅計劃概況
+                                </div>
                                 <div class="row gx-1">
                                   <div class="col-auto">
                                     <span class="text-natural-50">欄位皆為</span>
@@ -330,7 +417,8 @@
                                 </div>
                               </div>
                               <div class="mb-4 mb-lg-6">
-                                <input class="form-control fs-8 fs-lg-7" type="text" value="作品案例展示" aria-label="作品案例展示" readonly />
+                                <input class="form-control fs-8 fs-lg-7" type="text" value="作品案例展示" aria-label="作品案例展示"
+                                  readonly />
                               </div>
                               <div class="mb-6 mb-lg-9">
                                 <div class="fileInput">
@@ -348,7 +436,8 @@
                           <div class="row">
                             <div class="col-lg-4">
                               <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
-                                <div class="w-lg-100 text-natural-10 fs-5 fs-lg-4 lh-sm fw-medium mb-0 mb-lg-3">職涯規劃</div>
+                                <div class="w-lg-100 text-natural-10 fs-5 fs-lg-4 lh-sm fw-medium mb-0 mb-lg-3">職涯規劃
+                                </div>
                                 <div class="row gx-1">
                                   <div class="col-auto">
                                     <span class="text-natural-50">欄位皆為</span>
@@ -576,7 +665,8 @@
                           <div class="row">
                             <div class="col-lg-4">
                               <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
-                                <div class="w-lg-100 text-natural-10 fs-5 fs-lg-4 lh-sm fw-medium mb-0 mb-lg-3">專業技能區塊</div>
+                                <div class="w-lg-100 text-natural-10 fs-5 fs-lg-4 lh-sm fw-medium mb-0 mb-lg-3">專業技能區塊
+                                </div>
                                 <div class="row gx-1">
                                   <div class="col-auto">
                                     <span class="text-natural-50">欄位皆為選填</span>
@@ -695,7 +785,8 @@
                           <div class="row">
                             <div class="col-lg-4">
                               <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
-                                <div class="w-lg-100 text-natural-10 fs-5 fs-lg-4 lh-sm fw-medium mb-0 mb-lg-3">教育背景</div>
+                                <div class="w-lg-100 text-natural-10 fs-5 fs-lg-4 lh-sm fw-medium mb-0 mb-lg-3">教育背景
+                                </div>
                                 <div class="row gx-1">
                                   <div class="col-auto">
                                     <span class="text-natural-50">欄位皆為選填</span>
@@ -746,10 +837,12 @@
                 <div class="modal-body p-6">
                   <form class="">
                     <div class="form-floating mb-4 mb-lg-6">
-                      <input type="password" class="form-control" id="newPassword" placeholder="新密碼" ><label for="newPassword">新密碼</label>
+                      <input type="password" class="form-control" id="newPassword" placeholder="新密碼"><label
+                        for="newPassword">新密碼</label>
                     </div>
                     <div class="form-floating">
-                      <input type="password" class="form-control" id="confirmNewPassword" placeholder="再次密碼" ><label for="confirmNewPassword">再次密碼</label>
+                      <input type="password" class="form-control" id="confirmNewPassword" placeholder="再次密碼"><label
+                        for="confirmNewPassword">再次密碼</label>
                     </div>
                   </form>
                 </div>
