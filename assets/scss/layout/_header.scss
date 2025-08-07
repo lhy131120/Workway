@@ -33,6 +33,14 @@ header {
     }
   }
 
+  .nav-item {
+    &.active .nav-link,
+    .nav-link:hover {
+      background-color: var(--bs-natural-90);
+      color: var(--bs-dark);
+    }
+  }
+
   
 
 }
