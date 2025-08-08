@@ -443,7 +443,7 @@ $position-values: (
 
 $body-text-align:           null !default;
 $body-color:                #141A1F!default; //$gray-900 !default;
-$body-bg:                   #F0F3F5 !default; //$white !default;
+$body-bg:                   $light !default; //$white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
 $body-secondary-bg:         $gray-200 !default;
