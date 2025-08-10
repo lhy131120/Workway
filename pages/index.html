@@ -12,7 +12,29 @@
   <body>
     <%- include('./layout/header'); -%>
 
-      <h1>首頁</h1>
+       <section id="hero" class="py-9 py-lg-5">
+        <div class="container-fluid">
+          <div class="mw-816 mx-auto">
+            <p class="mb-6 fw-bold lh-sm text-center heading-7 heading-lg-1">一起陪伴、探索 <br>還有你那些未完成的夢</p>
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row">
+              <p class="mb-4 mb-lg-0 text-natural-50 fs-7 fs-lg-6 text-center text-lg-start">自由工作很美，也很難。 <br>我們用 1 對 1 陪伴，陪你從第一步開始，直到夢想變成日常</p>
+              <button class="btn btn-secondary-50 btn-icon">開始你的職旅</button>
+            </div>
+          </div>
+          <div class="row row-cols-3 gx-6">
+            <div class="col">
+              <img class="img-fluid" src="/assets/images/index/hero-1.png" alt="hero-1">
+            </div>
+            <div class="col">
+              <img class="img-fluid" src="/assets/images/index/hero-2.png" alt="hero-1">
+              <img class="img-fluid" src="/assets/images/index/hero-3.png" alt="hero-1">
+            </div>
+            <div class="col">
+              <img class="img-fluid" src="/assets/images/index/hero-4.png" alt="hero-1">
+            </div>
+          </div>
+        </div>
+       </section>
 
       <%- include('./layout/footer'); -%>
 

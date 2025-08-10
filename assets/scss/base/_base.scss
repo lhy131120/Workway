@@ -13,6 +13,13 @@
       background-color: var(--bs-secondary-50);
     }
   }
+
+  &.btn-secondary-50 {
+    &:hover {
+      border: 1px solid var(--bs-natural-90);
+      background-color: var(--bs-natural-90);
+    }
+  }
 }
 
 // common shadow style 

@@ -211,7 +211,10 @@ $utilities: map-merge(
       responsive: true,
       property: max-width,
       class: mw,
-      values: (100: 100%)
+      values: (
+        100: 100%,
+        816: 816px
+      )
     ),
     "viewport-width": (
       property: width,
@@ -816,6 +819,20 @@ $utilities: map-merge(
       calss: null,
       values: (
         2: 0.02em
+      )
+    ),
+    "heading-font-size": (
+      property: font-size,
+      class: heading,
+      responsive: true,
+      values: (
+        1: 5rem,
+        2: 4.5rem,
+        3: 4rem,
+        4: 3.5rem,
+        5: 3rem,
+        6: 2.5rem,
+        7: 2rem  // 添加了你提到的 heading-7
       )
     ),
     // scss-docs-end utils-zindex
