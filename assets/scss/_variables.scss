@@ -437,6 +437,11 @@ $position-values: (
 ) !default;
 // scss-docs-end position-map
 
+$extended-position-values: map-merge(
+  map-remove($spacers, 0),
+  $position-values
+) !default;
+
 // Body
 //
 // Settings for the `<body>` element.
@@ -1359,7 +1364,7 @@ $card-title-color:                  null !default;
 $card-subtitle-color:               null !default;
 $card-border-width:                 var(--#{$prefix}border-width) !default;
 $card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
-$card-border-radius:                var(--#{$prefix}border-radius) !default;
+$card-border-radius:                1.5rem!default; //var(--#{$prefix}border-radius) !default;
 $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
@@ -1500,11 +1505,11 @@ $toast-header-border-color:         $toast-border-color !default;
 
 // scss-docs-start badge-variables
 $badge-font-size:                   .75em !default;
-$badge-font-weight:                 $font-weight-bold !default;
-$badge-color:                       $white !default;
-$badge-padding-y:                   .35em !default;
-$badge-padding-x:                   .65em !default;
-$badge-border-radius:               var(--#{$prefix}border-radius) !default;
+$badge-font-weight:                 500; //$font-weight-bold !default;
+$badge-color:                       $light !default;
+$badge-padding-y:                   .5rem !default;
+$badge-padding-x:                   1rem !default;
+$badge-border-radius:               var(--#{$prefix}border-radius-lg) !default;
 // scss-docs-end badge-variables
 
 

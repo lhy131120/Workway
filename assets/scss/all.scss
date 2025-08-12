@@ -35,7 +35,7 @@
 @import "bootstrap/scss/button-group";
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
-// @import "bootstrap/scss/card";
+@import "bootstrap/scss/card";
 // @import "bootstrap/scss/accordion";
 @import "bootstrap/scss/breadcrumb";
 @import "bootstrap/scss/pagination";
@@ -60,7 +60,9 @@
 // 8. Add additional custom code here
 
 @import './base/base';
-@import './layout/header.scss';
-@import './layout/footer.scss';
+@import './layout/header';
+@import './layout/footer';
 
-@import './pages/index.scss';
+@import './pages/index';
+
+@import './utils/swiper';

@@ -1,0 +1,20 @@
+.home-hero {
+  .mw-816 {
+    background-image: url('/assets/images/index/gradient-ball.png');
+    background-repeat: no-repeat;
+    background-position: 10% top;
+    background-size: auto 200%;
+  }
+}
+
+.home-story {
+
+  ul > li {
+    max-width: 400px;
+  }
+  
+  img {
+    aspect-ratio: 400 / 500;
+  }
+
+}

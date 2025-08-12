@@ -97,24 +97,42 @@ $utilities: map-merge(
       property: position,
       values: static relative absolute fixed sticky
     ),
+    // "top": (
+    //   property: top,
+    //   values: $position-values
+    // ),
+    // "bottom": (
+    //   property: bottom,
+    //   values: $position-values
+    // ),
+    // "start": (
+    //   property: left,
+    //   class: start,
+    //   values: $position-values
+    // ),
+    // "end": (
+    //   property: right,
+    //   class: end,
+    //   values: $position-values
+    // ),
     "top": (
-      property: top,
-      values: $position-values
-    ),
-    "bottom": (
-      property: bottom,
-      values: $position-values
-    ),
-    "start": (
-      property: left,
-      class: start,
-      values: $position-values
-    ),
-    "end": (
-      property: right,
-      class: end,
-      values: $position-values
-    ),
+  property: top,
+  values: $extended-position-values
+),
+"bottom": (
+  property: bottom,
+  values: $extended-position-values
+),
+"start": (
+  property: left,
+  class: start,
+  values: $extended-position-values
+),
+"end": (
+  property: right,
+  class: end,
+  values: $extended-position-values
+),
     "translate-middle": (
       property: transform,
       class: translate-middle,
@@ -213,6 +231,7 @@ $utilities: map-merge(
       class: mw,
       values: (
         100: 100%,
+        48: 48px,
         816: 816px
       )
     ),
