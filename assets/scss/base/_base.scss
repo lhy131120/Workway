@@ -28,7 +28,7 @@
 }
 
 .common-shadow-sm {
-  box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.12);
+  box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.12);
 }
 
 form {
@@ -437,4 +437,44 @@ form {
   &.table-striped > tbody > tr:nth-of-type(even) {
     background-color: var(--bs-natural-90);
   }
+}
+
+
+.question-block {
+  margin: 14px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 14px solid #4A69E8;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 14px solid #FCFCFD;
+  }
+}
+
+// custeom special border
+.border-end-top-12 {
+  border-top-right-radius: 12px!important;
+}
+
+.border-bottom-left-0 {
+  border-bottom-left-radius: 0!important;
 }

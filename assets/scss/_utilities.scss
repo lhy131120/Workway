@@ -222,7 +222,8 @@ $utilities: map-merge(
         50: 50%,
         75: 75%,
         100: 100%,
-        auto: auto
+        auto: auto,
+        fit-content: fit-content
       )
     ),
     "max-width": (
@@ -230,8 +231,10 @@ $utilities: map-merge(
       property: max-width,
       class: mw,
       values: (
+        none: inherit,
         100: 100%,
         48: 48px,
+        350: 350px,
         816: 816px
       )
     ),
@@ -254,6 +257,7 @@ $utilities: map-merge(
         50: 50%,
         75: 75%,
         100: 100%,
+        200: 200px,
         auto: auto
       )
     ),

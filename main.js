@@ -37,17 +37,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // if (document.querySelector("#home-story")) {
-  //   const swiper = new Swiper("#home-story .swiper", {
-  //     slidesPerView: 1.05,
-  //     spaceBetween: 16,
-  //     breakpoints: {
-  //       992: {
-  //         slidesPerView: "auto",
-  //         spaceBetween: 24
-  //       }
-  //     }
-  //   })
-  // }
+  if (document.querySelector("#home-story")) {
+    const swiper = new Swiper("#home-story .swiper", {
+      slidesPerView: 1.05,
+      spaceBetween: 16,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: true
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: 2.85,
+          spaceBetween: 24
+        }
+      },
+      on: {
+        init: setSwiperCardHeight(),
+        slideChange: setSwiperCardHeight(),
+      }
+    });
+
+    // 監聽窗口大小變化
+    window.addEventListener('resize', setSwiperCardHeight);
+
+    // 確保圖片加載完成後重新計算高度
+    window.addEventListener('load', setSwiperCardHeight);
+  }
+
+  function setSwiperCardHeight() {
+    const slides = document.querySelectorAll('.swiper-slide .card');
+    let maxHeight = 0;
+
+    // 重置高度以計算真實內容高度
+    slides.forEach(slide => {
+      slide.style.height = 'auto';
+      const slideHeight = slide.offsetHeight;
+      if (slideHeight > maxHeight) {
+        maxHeight = slideHeight;
+      }
+    });
+
+    // 將最大高度應用到所有卡片
+    slides.forEach(slide => {
+      slide.style.height = `${maxHeight}px`;
+    });
+  }
 
 })
