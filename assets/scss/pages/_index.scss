@@ -53,3 +53,28 @@
     
   }
 }
+
+.home-team {
+  .position-image {
+    top: 140px;
+    right: -200px;
+
+    @include media-breakpoint-down(lg) {
+      top: inherit;
+      bottom: -190px;
+      right: -190px; 
+    }
+  }
+}
+
+.home-service {
+  .container {
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+    }
+  }
+}
+
+.home-qa {
+  background-image: url('/assets/images/index/bg-grid.png');
+}

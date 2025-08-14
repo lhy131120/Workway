@@ -234,8 +234,11 @@ $utilities: map-merge(
         none: inherit,
         100: 100%,
         48: 48px,
+        // 160: 160px
         350: 350px,
         368: 368px,
+        400: 400px,
+        800: 800px,
         816: 816px
       )
     ),
@@ -857,7 +860,7 @@ $utilities: map-merge(
         4: 3.5rem,
         5: 3rem,
         6: 2.5rem,
-        7: 2rem  // 添加了你提到的 heading-7
+        7: 2rem 
       )
     ),
     // scss-docs-end utils-zindex

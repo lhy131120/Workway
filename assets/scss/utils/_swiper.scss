@@ -2,12 +2,10 @@
 
   &-wrapper {
     display: flex;
-    // align-items: stretch!important;
   }
 
   &-slide {
-    // height: auto;
-    // display: flex;
+    width: auto;
   }
 
   &-pagination {
@@ -35,7 +33,3 @@
     }
   }
 }
-
-// #home-story .swiper {
-//   overflow-y: auto;
-// }

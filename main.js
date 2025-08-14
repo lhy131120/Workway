@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (document.querySelector("#home-story")) {
+    const _div = document.querySelector("#home-story");
     const swiper = new Swiper("#home-story .swiper", {
       slidesPerView: 1.05,
       spaceBetween: 16,
@@ -53,20 +54,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
       on: {
-        init: setSwiperCardHeight(),
-        slideChange: setSwiperCardHeight(),
+        init: setSwiperCardHeight(_div),
+        slideChange: setSwiperCardHeight(_div),
       }
     });
-
-    // 監聽窗口大小變化
-    window.addEventListener('resize', setSwiperCardHeight);
-
-    // 確保圖片加載完成後重新計算高度
-    window.addEventListener('load', setSwiperCardHeight);
+    window.addEventListener('resize', setSwiperCardHeight(_div));
+    window.addEventListener('load', setSwiperCardHeight(_div));
   }
 
-  function setSwiperCardHeight() {
-    const slides = document.querySelectorAll('.swiper-slide .card');
+  if (document.querySelector("#home-service")) {
+    const _div = document.querySelector("#home-service");
+    const swiper = new Swiper("#home-service .swiper", {
+      slidesPerView: 1.15,
+      spaceBetween: 16,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 24
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 24
+        }
+      },
+      on: {
+        // init: setSwiperCardHeight(_div),
+        // slideChange: setSwiperCardHeight(_div),
+      } 
+    })
+    // window.addEventListener('resize', setSwiperCardHeight(_div));
+    // window.addEventListener('load', setSwiperCardHeight(_div));
+  }
+
+  function setSwiperCardHeight(div) {
+    console.log(div)
+    const slides = div.querySelectorAll('.swiper-slide > div');
     let maxHeight = 0;
 
     // 重置高度以計算真實內容高度
