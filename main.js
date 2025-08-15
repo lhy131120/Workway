@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setSwiperCardHeight(div) {
-    console.log(div)
+    // console.log(div)
     const slides = div.querySelectorAll('.swiper-slide > div');
     let maxHeight = 0;
 
