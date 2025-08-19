@@ -54,12 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
       on: {
-        init: setSwiperCardHeight(_div),
-        slideChange: setSwiperCardHeight(_div),
+        // init: setSwiperCardHeight(_div),
+        // slideChange: setSwiperCardHeight(_div),
       }
     });
-    window.addEventListener('resize', setSwiperCardHeight(_div));
-    window.addEventListener('load', setSwiperCardHeight(_div));
+    // window.addEventListener('resize', setSwiperCardHeight(_div));
+    // window.addEventListener('load', setSwiperCardHeight(_div));
   }
 
   if (document.querySelector("#home-service")) {
