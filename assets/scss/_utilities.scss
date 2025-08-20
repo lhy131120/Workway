@@ -234,7 +234,8 @@ $utilities: map-merge(
         none: inherit,
         100: 100%,
         48: 48px,
-        // 160: 160px
+        120: 120px,
+        160: 160px,
         350: 350px,
         368: 368px,
         400: 400px,
@@ -250,7 +251,10 @@ $utilities: map-merge(
     "min-viewport-width": (
       property: min-width,
       class: min-vw,
-      values: (100: 100vw)
+      values: (
+        100: 100vw,
+        72p: 72px,
+      )
     ),
     "height": (
       responsive: true,
@@ -263,6 +267,7 @@ $utilities: map-merge(
         75: 75%,
         100: 100%,
         200: 200px,
+        300: 300px,
         auto: auto
       )
     ),
@@ -846,6 +851,7 @@ $utilities: map-merge(
       property: letter-spacing,
       calss: null,
       values: (
+        0: 0,
         2: 0.02em
       )
     ),

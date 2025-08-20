@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 16,
       loop: true,
       autoplay: {
-        delay: 2500,
+        delay: 5000,
         disableOnInteraction: true
       },
       breakpoints: {
@@ -89,6 +89,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // window.addEventListener('resize', setSwiperCardHeight(_div));
     // window.addEventListener('load', setSwiperCardHeight(_div));
   }
+
+  if (document.querySelector("#about")) {
+		const _div = document.querySelector("#about");
+		const swiper = new Swiper("#about .swiper", {
+			slidesPerView: 1.05,
+			spaceBetween: 24,
+			loop: false,
+			autoplay: {
+				delay: 30000,
+				disableOnInteraction: true,
+			},
+			breakpoints: {
+				992: {
+					slidesPerView: 4.8,
+					spaceBetween: 24,
+				},
+			},
+			on: {
+				// init: setSwiperCardHeight(_div),
+				// slideChange: setSwiperCardHeight(_div),
+			},
+		});
+		// window.addEventListener('resize', setSwiperCardHeight(_div));
+		// window.addEventListener('load', setSwiperCardHeight(_div));
+	}
 
   function setSwiperCardHeight(div) {
     // console.log(div)
