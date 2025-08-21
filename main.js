@@ -8,6 +8,21 @@ import './assets/scss/all.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  if(document.querySelector("#loginBtn")) {
+    const btn = document.querySelector("#loginBtn");
+    const modal = new bootstrap.Modal("#loginModal", {
+      backdrop: 'static',
+      focus: true,
+      keyboard: false
+    });
+    const closeBtn = document.querySelector("#loginModal .btn-close");
+    
+    btn.addEventListener('click', e => modal.show())
+    closeBtn.addEventListener('click', e => modal.hide())
+
+
+  }
+
   if (document.querySelector('#changePasswordModal')) {
     const changePassWordBtn = document.querySelector("#changePassword");
     const changePassWordCloseBtn = document.querySelector("#changePasswordModal .btn-close");
@@ -93,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector("#about")) {
 		const _div = document.querySelector("#about");
 		const swiper = new Swiper("#about .swiper", {
-			slidesPerView: 1.05,
+			slidesPerView: 1.2,
 			spaceBetween: 24,
 			loop: false,
 			autoplay: {
@@ -101,7 +116,15 @@ document.addEventListener('DOMContentLoaded', () => {
 				disableOnInteraction: true,
 			},
 			breakpoints: {
+				768: {
+					slidesPerView: 2.8,
+					spaceBetween: 24,
+				},
 				992: {
+					slidesPerView: 3.8,
+					spaceBetween: 24,
+				},
+				1200: {
 					slidesPerView: 4.8,
 					spaceBetween: 24,
 				},
