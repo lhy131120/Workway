@@ -39,7 +39,7 @@
             </li>
             <li class="nav-item d-block text-center w-100 w-lg-auto mt-auto ms-lg-auto">
               <div class="loginArea">
-                <button type="button" id="loginBtn" class="btn btn-light border letter-spacing-2 w-100 fw-bold fw-lg-normal bg-secondary-50 bg-lg-transparent ">登入/註冊</button>
+                <button type="button" id="loginBtn" class="btn btn-light border letter-spacing-2 w-100 fw-medium bg-secondary-50 bg-lg-transparent ">登入/註冊</button>
                 <div class="d-none align-items-center">
                   <span class="d-block lh-0 overflow-hidden ratio ratio-1x1 me-2" style="width: 44px;"><img src="/assets/images/user_pic.png" alt=""></span>
                   <span class="d-block fw-medium">Mokumaru</span>
@@ -53,33 +53,33 @@
   </nav>
 </header>
 
-<div class="modal modal-xl fade" id="loginModal" tabindex="-1" aria-hidden="true">
+<div class="modal modal-xl fade px-3 px-lg-0" id="loginModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content overflow-hidden rounded-5">
+    <div class="modal-content overflow-hidden rounded-5 border-0">
       <!-- <div class="modal-header">
         <h5 class="modal-title">Modal title</h5>
         <button type="button" class="btn-close" aria-label="Close"></button>
       </div> -->
       <div class="d-flex flex-nowrap">
-        <div class="d-none d-lg-block">
-          <img src="/assets/images/about/login.png" style="max-width: 700px;" class="h-100 w-100 object-fit-cover" alt="login">
+        <div class="d-none d-lg-block flex-grow-1">
+          <img src="/assets/images/about/login.png" class="h-100 w-100 object-fit-cover" alt="login">
         </div>
-        <div class="position-relative d-flex flex-column gap-6 gap-lg-9 p-6 p-lg-9 flex-1 w-100 text-center">
+        <div class="position-relative d-flex flex-column gap-6 gap-lg-9 p-6 p-lg-9 text-center w-100 mw-100 mw-lg-500">
           <button type="button" class="btn-close position-absolute top-6 end-6" aria-label="Close"></button>
           <h2 class="fs-3 fs-lg-2 fw-bold">登入</h2>
           <form action="">
             <div class="border-bottom border-natural-85 mb-6">
-              <button type="button" class="btn w-100 border-natural-85 btn-icon rounded-4 mb-4">Google</button>
-              <button type="button" class="btn w-100 border-natural-85 btn-icon rounded-4 mb-6">Discord</button>
+              <button type="button" class="btn w-100 border-natural-85 btn-icon btn-social btn-google rounded-4 mb-4">Google</button>
+              <button type="button" class="btn w-100 border-natural-85 btn-icon btn-social btn-discord rounded-4 mb-6">Discord</button>
             </div>
             <div class="mb-4 form-floating">
               <input type="email" class="form-control" id="loginName" placeholder="帳號">
               <label for="loginName">帳號</label>
-              
             </div>
-            <div class="mb-4 form-floating">
-              <input type="email" class="form-control" id="loginPasswordy" placeholder="密碼">
-              <label for="loginPasswordy">密碼</label>
+            <div class="mb-4 form-floating position-relative password-input-wrap">
+              <input type="password" class="form-control" id="loginPassword" placeholder="密碼">
+              <label for="loginPassword">密碼</label>
+              <button type="button" id="show-password" aria-label="toggle-password" class="show-password position-absolute top-50 end-3 translate-middle-y p-0 border-0 fs-0 d-block bg-transparent"><img src="/assets/images/visibility.svg" alt="show-password-icon" class="img-fluid"></button>
             </div>
             <div class="text-end mb-4">
               <a href="javascript:;" class="text-natural-50 fs-8 lh-sm d-lg-inline-block text-decoration-none">忘記密碼</a>

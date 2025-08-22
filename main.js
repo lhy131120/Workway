@@ -8,6 +8,18 @@ import './assets/scss/all.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  if (document.querySelectorAll(".show-password").length > 0) {
+    const btns = document.querySelectorAll(".show-password");
+    btns.forEach(btn => {
+      btn.addEventListener('click', e => {
+        const parent = btn.closest('.password-input-wrap');
+        const input = parent.querySelector('input');
+        const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+        input.setAttribute('type', type);
+      })
+    })
+  }
+
   if(document.querySelector("#loginBtn")) {
     const btn = document.querySelector("#loginBtn");
     const modal = new bootstrap.Modal("#loginModal", {
@@ -16,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       keyboard: false
     });
     const closeBtn = document.querySelector("#loginModal .btn-close");
-    
+    modal.show()
     btn.addEventListener('click', e => modal.show())
     closeBtn.addEventListener('click', e => modal.hide())
 
