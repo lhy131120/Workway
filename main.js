@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       keyboard: false
     });
     const closeBtn = document.querySelector("#loginModal .btn-close");
-    
+    modal.show();
     btn.addEventListener('click', e => modal.show())
     closeBtn.addEventListener('click', e => modal.hide())
 
