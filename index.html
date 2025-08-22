@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/Workway/assets/favicon-VQbgFjcT.png">
     <title>首頁</title>
-    <script type="module" crossorigin src="/Workway/assets/main-DaOwpA5o.js"></script>
+    <script type="module" crossorigin src="/Workway/assets/main-Cu1zv_ny.js"></script>
     <link rel="stylesheet" crossorigin href="/Workway/assets/main-C10gds1z.css">
   </head>
 
@@ -70,43 +70,92 @@
 <div class="modal modal-xl fade px-3 px-lg-0" id="loginModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content overflow-hidden rounded-5 border-0">
-      <!-- <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" aria-label="Close"></button>
-      </div> -->
-      <div class="d-flex flex-nowrap">
-        <div class="d-none d-lg-block flex-grow-1">
-          <img src="/Workway/assets/login-DRI71ClI.png" class="h-100 w-100 object-fit-cover" alt="login">
-        </div>
-        <div class="position-relative d-flex flex-column gap-6 gap-lg-9 p-6 p-lg-9 text-center w-100 mw-100 mw-lg-500">
-          <button type="button" class="btn-close position-absolute top-6 end-6" aria-label="Close"></button>
-          <h2 class="fs-3 fs-lg-2 fw-bold">登入</h2>
-          <form action="">
-            <div class="border-bottom border-natural-85 mb-6">
-              <button type="button" class="btn w-100 border-natural-85 btn-icon btn-social btn-google rounded-4 mb-4">Google</button>
-              <button type="button" class="btn w-100 border-natural-85 btn-icon btn-social btn-discord rounded-4 mb-6">Discord</button>
+      <div id="toggle-login">
+        
+          <div class="d-flex flex-nowrap" id="login">
+            <div class="d-none d-lg-block flex-grow-1">
+              <img src="/Workway/assets/login-DRI71ClI.png" class="h-100 w-100 object-fit-cover" alt="login">
             </div>
-            <div class="mb-4 form-floating">
-              <input type="email" class="form-control" id="loginName" placeholder="帳號">
-              <label for="loginName">帳號</label>
+            <div class="position-relative d-flex flex-column gap-6 gap-lg-9 p-6 p-lg-9 text-center w-100 mw-100 mw-lg-500">
+              <button type="button" class="btn-close position-absolute top-6 end-6" aria-label="Close"></button>
+              <h2 class="fs-3 fs-lg-2 fw-bold">登入</h2>
+              <form action="">
+                <div class="border-bottom border-natural-85 mb-6">
+                  <button type="button" class="btn w-100 border-natural-85 btn-icon btn-social btn-google rounded-4 mb-4">Google</button>
+                  <button type="button" class="btn w-100 border-natural-85 btn-icon btn-social btn-discord rounded-4 mb-6">Discord</button>
+                </div>
+                <div class="mb-4 form-floating">
+                  <input type="email" class="form-control" id="loginName" placeholder="帳號">
+                  <label for="loginName">帳號</label>
+                </div>
+                <div class="mb-4 form-floating position-relative password-input-wrap">
+                  <input type="password" class="form-control" id="loginPassword" placeholder="密碼">
+                  <label for="loginPassword">密碼</label>
+                  <button type="button" id="show-password" aria-label="toggle-password" class="show-password position-absolute top-50 end-3 translate-middle-y p-0 border-0 fs-0 d-block bg-transparent"><img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M13.4166%2011.0833L12.2083%209.87492C12.3333%209.22214%2012.1458%208.61103%2011.6458%208.04159C11.1458%207.47214%2010.5%207.24992%209.70831%207.37492L8.49998%206.16659C8.73609%206.05547%208.97567%205.97214%209.21873%205.91659C9.46178%205.86103%209.7222%205.83325%209.99998%205.83325C11.0416%205.83325%2011.9271%206.19784%2012.6562%206.927C13.3854%207.65617%2013.75%208.54159%2013.75%209.58325C13.75%209.86103%2013.7222%2010.1214%2013.6666%2010.3645C13.6111%2010.6076%2013.5278%2010.8471%2013.4166%2011.0833ZM16.0833%2013.7083L14.875%2012.5416C15.4028%2012.1388%2015.8715%2011.6978%2016.2812%2011.2187C16.691%2010.7395%2017.0416%2010.1944%2017.3333%209.58325C16.6389%208.18047%2015.6423%207.06589%2014.3437%206.2395C13.0451%205.41311%2011.5972%204.99992%209.99998%204.99992C9.5972%204.99992%209.20137%205.0277%208.81248%205.08325C8.42359%205.13881%208.04165%205.22214%207.66665%205.33325L6.37498%204.04159C6.94442%203.80547%207.52776%203.62839%208.12498%203.51034C8.7222%203.39228%209.3472%203.33325%209.99998%203.33325C12.0972%203.33325%2013.9653%203.91311%2015.6041%205.07284C17.243%206.23256%2018.4305%207.73603%2019.1666%209.58325C18.8472%2010.4027%2018.4271%2011.1631%2017.9062%2011.8645C17.3854%2012.5659%2016.7778%2013.1805%2016.0833%2013.7083ZM16.5%2018.8333L13%2015.3749C12.5139%2015.5277%2012.0243%2015.6423%2011.5312%2015.7187C11.0382%2015.7951%2010.5278%2015.8333%209.99998%2015.8333C7.90276%2015.8333%206.0347%2015.2534%204.39581%2014.0937C2.75692%2012.9339%201.56942%2011.4305%200.833313%209.58325C1.12498%208.84714%201.49304%208.16311%201.93748%207.53117C2.38192%206.89922%202.88887%206.33325%203.45831%205.83325L1.16665%203.49992L2.33331%202.33325L17.6666%2017.6666L16.5%2018.8333ZM4.62498%206.99992C4.2222%207.36103%203.85415%207.75686%203.52081%208.18742C3.18748%208.61797%202.90276%209.08325%202.66665%209.58325C3.36109%2010.986%204.35762%2012.1006%205.65623%2012.927C6.95484%2013.7534%208.40276%2014.1666%209.99998%2014.1666C10.2778%2014.1666%2010.5486%2014.1492%2010.8125%2014.1145C11.0764%2014.0798%2011.3472%2014.0416%2011.625%2013.9999L10.875%2013.2083C10.7222%2013.2499%2010.5764%2013.2812%2010.4375%2013.302C10.2986%2013.3228%2010.1528%2013.3333%209.99998%2013.3333C8.95831%2013.3333%208.0729%2012.9687%207.34373%2012.2395C6.61456%2011.5103%206.24998%2010.6249%206.24998%209.58325C6.24998%209.43047%206.2604%209.28464%206.28123%209.14575C6.30206%209.00686%206.33331%208.86103%206.37498%208.70825L4.62498%206.99992Z'%20fill='%23141A1F'/%3e%3c/svg%3e" alt="show-password-icon" class="img-fluid"></button>
+                </div>
+                <div class="text-end mb-4">
+                  <a href="javascript:;" class="text-natural-50 fs-8 lh-sm d-lg-inline-block text-decoration-none">忘記密碼</a>
+                </div>
+                <button type="button" class="btn btn-dark btn-icon w-100 rounded-4">送出</button>
+    
+              </form>
+              <div class="d-flex justify-content-center align-items-center row-gap-1">
+                <p class="text-natural-50 lh-sm fw-medium fs-8 fs-lg-7 mb-0">不是會員？</p>
+                <a href="javascript:;" id="btn-register" class="active d-block text-primary-60 text-decoration-underline fw-medium fs-8 fs-lg-7" id="btnRegister" >快速註冊</a>
+              </div>
             </div>
-            <div class="mb-4 form-floating position-relative password-input-wrap">
-              <input type="password" class="form-control" id="loginPassword" placeholder="密碼">
-              <label for="loginPassword">密碼</label>
-              <button type="button" id="show-password" aria-label="toggle-password" class="show-password position-absolute top-50 end-3 translate-middle-y p-0 border-0 fs-0 d-block bg-transparent"><img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M13.4166%2011.0833L12.2083%209.87492C12.3333%209.22214%2012.1458%208.61103%2011.6458%208.04159C11.1458%207.47214%2010.5%207.24992%209.70831%207.37492L8.49998%206.16659C8.73609%206.05547%208.97567%205.97214%209.21873%205.91659C9.46178%205.86103%209.7222%205.83325%209.99998%205.83325C11.0416%205.83325%2011.9271%206.19784%2012.6562%206.927C13.3854%207.65617%2013.75%208.54159%2013.75%209.58325C13.75%209.86103%2013.7222%2010.1214%2013.6666%2010.3645C13.6111%2010.6076%2013.5278%2010.8471%2013.4166%2011.0833ZM16.0833%2013.7083L14.875%2012.5416C15.4028%2012.1388%2015.8715%2011.6978%2016.2812%2011.2187C16.691%2010.7395%2017.0416%2010.1944%2017.3333%209.58325C16.6389%208.18047%2015.6423%207.06589%2014.3437%206.2395C13.0451%205.41311%2011.5972%204.99992%209.99998%204.99992C9.5972%204.99992%209.20137%205.0277%208.81248%205.08325C8.42359%205.13881%208.04165%205.22214%207.66665%205.33325L6.37498%204.04159C6.94442%203.80547%207.52776%203.62839%208.12498%203.51034C8.7222%203.39228%209.3472%203.33325%209.99998%203.33325C12.0972%203.33325%2013.9653%203.91311%2015.6041%205.07284C17.243%206.23256%2018.4305%207.73603%2019.1666%209.58325C18.8472%2010.4027%2018.4271%2011.1631%2017.9062%2011.8645C17.3854%2012.5659%2016.7778%2013.1805%2016.0833%2013.7083ZM16.5%2018.8333L13%2015.3749C12.5139%2015.5277%2012.0243%2015.6423%2011.5312%2015.7187C11.0382%2015.7951%2010.5278%2015.8333%209.99998%2015.8333C7.90276%2015.8333%206.0347%2015.2534%204.39581%2014.0937C2.75692%2012.9339%201.56942%2011.4305%200.833313%209.58325C1.12498%208.84714%201.49304%208.16311%201.93748%207.53117C2.38192%206.89922%202.88887%206.33325%203.45831%205.83325L1.16665%203.49992L2.33331%202.33325L17.6666%2017.6666L16.5%2018.8333ZM4.62498%206.99992C4.2222%207.36103%203.85415%207.75686%203.52081%208.18742C3.18748%208.61797%202.90276%209.08325%202.66665%209.58325C3.36109%2010.986%204.35762%2012.1006%205.65623%2012.927C6.95484%2013.7534%208.40276%2014.1666%209.99998%2014.1666C10.2778%2014.1666%2010.5486%2014.1492%2010.8125%2014.1145C11.0764%2014.0798%2011.3472%2014.0416%2011.625%2013.9999L10.875%2013.2083C10.7222%2013.2499%2010.5764%2013.2812%2010.4375%2013.302C10.2986%2013.3228%2010.1528%2013.3333%209.99998%2013.3333C8.95831%2013.3333%208.0729%2012.9687%207.34373%2012.2395C6.61456%2011.5103%206.24998%2010.6249%206.24998%209.58325C6.24998%209.43047%206.2604%209.28464%206.28123%209.14575C6.30206%209.00686%206.33331%208.86103%206.37498%208.70825L4.62498%206.99992Z'%20fill='%23141A1F'/%3e%3c/svg%3e" alt="show-password-icon" class="img-fluid"></button>
-            </div>
-            <div class="text-end mb-4">
-              <a href="javascript:;" class="text-natural-50 fs-8 lh-sm d-lg-inline-block text-decoration-none">忘記密碼</a>
-            </div>
-            <button type="button" class="btn btn-dark btn-icon w-100 rounded-4">送出</button>
-
-          </form>
-          <div class="d-flex justify-content-center align-items-center row-gap-1">
-            <p class="text-natural-50 lh-sm fw-medium fs-8 fs-lg-7 mb-0">不是會員？</p>
-            <a href="javascript:;" class="d-block text-primary-60 text-decoration-underline fw-medium fs-8 fs-lg-7">快速註冊</a>
           </div>
-        </div>
+        
+          <div class="d-flex flex-nowrap flex-row-reverse d-none" id="register">
+            <div class="d-none d-lg-block flex-grow-1">
+              <img src="/Workway/assets/register-Cfh0nsYT.png" class="h-100 w-100 object-fit-cover" alt="register">
+            </div>
+            <div class="position-relative d-flex flex-column gap-6 gap-lg-9 p-6 p-lg-9 text-center w-100 mw-100 mw-lg-500">
+              <button type="button" class="btn-close position-absolute top-6 end-6" aria-label="Close"></button>
+              <h2 class="fs-3 fs-lg-2 fw-bold">註冊</h2>
+              <form action="">
+                <div class="border-bottom border-natural-85 mb-6">
+                  <button type="button" class="btn w-100 border-natural-85 btn-icon btn-social btn-google rounded-4 mb-4">Google</button>
+                  <button type="button" class="btn w-100 border-natural-85 btn-icon btn-social btn-discord rounded-4 mb-6">Discord</button>
+                </div>
+                <div class="mb-4 form-floating">
+                  <input type="email" class="form-control" id="registerName" placeholder="帳號">
+                  <label for="registerName" class="text-dark">帳號</label>
+                </div>
+                <div class="mb-4 form-floating position-relative password-input-wrap">
+                  <input type="password" class="form-control" id="registerPassword" placeholder="密碼">
+                  <label for="registerPassword" class="text-dark">密碼</label>
+                  <button type="button" id="show-registerPassword" aria-label="toggle-password" class="show-password position-absolute top-50 end-3 translate-middle-y p-0 border-0 fs-0 d-block bg-transparent"><img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M13.4166%2011.0833L12.2083%209.87492C12.3333%209.22214%2012.1458%208.61103%2011.6458%208.04159C11.1458%207.47214%2010.5%207.24992%209.70831%207.37492L8.49998%206.16659C8.73609%206.05547%208.97567%205.97214%209.21873%205.91659C9.46178%205.86103%209.7222%205.83325%209.99998%205.83325C11.0416%205.83325%2011.9271%206.19784%2012.6562%206.927C13.3854%207.65617%2013.75%208.54159%2013.75%209.58325C13.75%209.86103%2013.7222%2010.1214%2013.6666%2010.3645C13.6111%2010.6076%2013.5278%2010.8471%2013.4166%2011.0833ZM16.0833%2013.7083L14.875%2012.5416C15.4028%2012.1388%2015.8715%2011.6978%2016.2812%2011.2187C16.691%2010.7395%2017.0416%2010.1944%2017.3333%209.58325C16.6389%208.18047%2015.6423%207.06589%2014.3437%206.2395C13.0451%205.41311%2011.5972%204.99992%209.99998%204.99992C9.5972%204.99992%209.20137%205.0277%208.81248%205.08325C8.42359%205.13881%208.04165%205.22214%207.66665%205.33325L6.37498%204.04159C6.94442%203.80547%207.52776%203.62839%208.12498%203.51034C8.7222%203.39228%209.3472%203.33325%209.99998%203.33325C12.0972%203.33325%2013.9653%203.91311%2015.6041%205.07284C17.243%206.23256%2018.4305%207.73603%2019.1666%209.58325C18.8472%2010.4027%2018.4271%2011.1631%2017.9062%2011.8645C17.3854%2012.5659%2016.7778%2013.1805%2016.0833%2013.7083ZM16.5%2018.8333L13%2015.3749C12.5139%2015.5277%2012.0243%2015.6423%2011.5312%2015.7187C11.0382%2015.7951%2010.5278%2015.8333%209.99998%2015.8333C7.90276%2015.8333%206.0347%2015.2534%204.39581%2014.0937C2.75692%2012.9339%201.56942%2011.4305%200.833313%209.58325C1.12498%208.84714%201.49304%208.16311%201.93748%207.53117C2.38192%206.89922%202.88887%206.33325%203.45831%205.83325L1.16665%203.49992L2.33331%202.33325L17.6666%2017.6666L16.5%2018.8333ZM4.62498%206.99992C4.2222%207.36103%203.85415%207.75686%203.52081%208.18742C3.18748%208.61797%202.90276%209.08325%202.66665%209.58325C3.36109%2010.986%204.35762%2012.1006%205.65623%2012.927C6.95484%2013.7534%208.40276%2014.1666%209.99998%2014.1666C10.2778%2014.1666%2010.5486%2014.1492%2010.8125%2014.1145C11.0764%2014.0798%2011.3472%2014.0416%2011.625%2013.9999L10.875%2013.2083C10.7222%2013.2499%2010.5764%2013.2812%2010.4375%2013.302C10.2986%2013.3228%2010.1528%2013.3333%209.99998%2013.3333C8.95831%2013.3333%208.0729%2012.9687%207.34373%2012.2395C6.61456%2011.5103%206.24998%2010.6249%206.24998%209.58325C6.24998%209.43047%206.2604%209.28464%206.28123%209.14575C6.30206%209.00686%206.33331%208.86103%206.37498%208.70825L4.62498%206.99992Z'%20fill='%23141A1F'/%3e%3c/svg%3e" alt="show-password-icon" class="img-fluid"></button>
+                </div>
+                <div class="mb-4 form-floating position-relative password-input-wrap">
+                  <input type="password" class="form-control" id="confirmRegisterPassword" placeholder="確認密碼">
+                  <label for="confirmRegisterPassword" class="text-dark">確認密碼</label>
+                  <button type="button" id="show-confirmRegisterPassword" aria-label="toggle-password" class="show-password position-absolute top-50 end-3 translate-middle-y p-0 border-0 fs-0 d-block bg-transparent"><img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M13.4166%2011.0833L12.2083%209.87492C12.3333%209.22214%2012.1458%208.61103%2011.6458%208.04159C11.1458%207.47214%2010.5%207.24992%209.70831%207.37492L8.49998%206.16659C8.73609%206.05547%208.97567%205.97214%209.21873%205.91659C9.46178%205.86103%209.7222%205.83325%209.99998%205.83325C11.0416%205.83325%2011.9271%206.19784%2012.6562%206.927C13.3854%207.65617%2013.75%208.54159%2013.75%209.58325C13.75%209.86103%2013.7222%2010.1214%2013.6666%2010.3645C13.6111%2010.6076%2013.5278%2010.8471%2013.4166%2011.0833ZM16.0833%2013.7083L14.875%2012.5416C15.4028%2012.1388%2015.8715%2011.6978%2016.2812%2011.2187C16.691%2010.7395%2017.0416%2010.1944%2017.3333%209.58325C16.6389%208.18047%2015.6423%207.06589%2014.3437%206.2395C13.0451%205.41311%2011.5972%204.99992%209.99998%204.99992C9.5972%204.99992%209.20137%205.0277%208.81248%205.08325C8.42359%205.13881%208.04165%205.22214%207.66665%205.33325L6.37498%204.04159C6.94442%203.80547%207.52776%203.62839%208.12498%203.51034C8.7222%203.39228%209.3472%203.33325%209.99998%203.33325C12.0972%203.33325%2013.9653%203.91311%2015.6041%205.07284C17.243%206.23256%2018.4305%207.73603%2019.1666%209.58325C18.8472%2010.4027%2018.4271%2011.1631%2017.9062%2011.8645C17.3854%2012.5659%2016.7778%2013.1805%2016.0833%2013.7083ZM16.5%2018.8333L13%2015.3749C12.5139%2015.5277%2012.0243%2015.6423%2011.5312%2015.7187C11.0382%2015.7951%2010.5278%2015.8333%209.99998%2015.8333C7.90276%2015.8333%206.0347%2015.2534%204.39581%2014.0937C2.75692%2012.9339%201.56942%2011.4305%200.833313%209.58325C1.12498%208.84714%201.49304%208.16311%201.93748%207.53117C2.38192%206.89922%202.88887%206.33325%203.45831%205.83325L1.16665%203.49992L2.33331%202.33325L17.6666%2017.6666L16.5%2018.8333ZM4.62498%206.99992C4.2222%207.36103%203.85415%207.75686%203.52081%208.18742C3.18748%208.61797%202.90276%209.08325%202.66665%209.58325C3.36109%2010.986%204.35762%2012.1006%205.65623%2012.927C6.95484%2013.7534%208.40276%2014.1666%209.99998%2014.1666C10.2778%2014.1666%2010.5486%2014.1492%2010.8125%2014.1145C11.0764%2014.0798%2011.3472%2014.0416%2011.625%2013.9999L10.875%2013.2083C10.7222%2013.2499%2010.5764%2013.2812%2010.4375%2013.302C10.2986%2013.3228%2010.1528%2013.3333%209.99998%2013.3333C8.95831%2013.3333%208.0729%2012.9687%207.34373%2012.2395C6.61456%2011.5103%206.24998%2010.6249%206.24998%209.58325C6.24998%209.43047%206.2604%209.28464%206.28123%209.14575C6.30206%209.00686%206.33331%208.86103%206.37498%208.70825L4.62498%206.99992Z'%20fill='%23141A1F'/%3e%3c/svg%3e" alt="show-password-icon" class="img-fluid"></button>
+                </div>
+                <div class="text-end mb-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="accept" id="acceptItem">
+                    <div class="d-flex align-items-center gap-1">
+                      <label class="form-check-label" for="acceptItem">我同意</label>
+                      <a href="javascript:;" class="fs-8">服務條款</a>
+                      <span>和</span>
+                      <a href="javascript:;" class="fs-8">隱私政策</a>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-dark btn-icon w-100 rounded-4">送出</button>
+    
+              </form>
+              <div class="d-flex justify-content-center align-items-center row-gap-1">
+                <p class="text-natural-50 lh-sm fw-medium fs-8 fs-lg-7 mb-0">己是會員？</p>
+                <a href="javascript:;" id="btn-login" class="d-block text-primary-60 text-decoration-underline fw-medium fs-8 fs-lg-7" id="btnLogin">直接登入</a>
+              </div>
+            </div>
+          </div>
       </div>
+      
+
+      
     </div>
   </div>
 </div>
@@ -118,7 +167,7 @@
               class="d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row">
               <p class="mb-4 mb-lg-0 text-natural-50 fs-7 fs-lg-6 text-center text-lg-start">自由工作很美，也很難。 <br>我們用 1 對 1
                 陪伴，陪你從第一步開始，直到夢想變成日常</p>
-              <button class="btn btn-secondary-50 btn-icon">開始你的職旅</button>
+              <a href="./solution.html" class="btn btn-secondary-50 btn-icon">開始你的職旅</a>
             </div>
             <img src="/Workway/assets/gradient-ball-DJ-PbHbR.png" alt="裝修背景"
               class="position-absolute top-0 start-50 translate-middle-x mw-350 mw-lg-100 w-100 z-n1">
@@ -318,7 +367,7 @@
               <p class="text-natural-50 mb-4 mb-lg-6 fs-7 fs-lg-6">職旅 WorkWay 匯集了來自不同領域、擁有豐富實戰經驗的自由工作者與數位遊牧專家。我們的顧問不只教授理論，更分享親身經歷的挑戰與解決之道。</p>
               <p class="text-natural-50 mb-4 mb-lg-6 fs-7 fs-lg-6">我們相信，最好的指導來自於那些已經走過你想走的路，並願意伸出手拉你一把的人。</p>
               <div class="d-flex justify-content-center justify-content-lg-start">
-                <button type="button" class="btn btn-dark btn-icon">了解更多職旅夥伴</button>
+                <a href="./about.html" type="button" class="btn btn-dark btn-icon">了解更多職旅夥伴</a>
               </div>
             </div>
           </div>
