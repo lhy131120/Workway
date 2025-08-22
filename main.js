@@ -1,51 +1,87 @@
-import * as bootstrap from 'bootstrap';
+import * as bootstrap from "bootstrap";
 // import { Modal } from 'bootstrap';
 
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
 
-import './assets/scss/all.scss';
+import "./assets/scss/all.scss";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-  if(document.querySelector("#loginBtn")) {
-    const btn = document.querySelector("#loginBtn");
-    const modal = new bootstrap.Modal("#loginModal", {
-      backdrop: 'static',
-      focus: true,
-      keyboard: false
+  if (document.querySelectorAll(".show-password").length > 0) {
+    const btns = document.querySelectorAll(".show-password");
+    btns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const parent = btn.closest(".password-input-wrap");
+        const input = parent.querySelector("input");
+        const type =
+          input.getAttribute("type") === "password" ? "text" : "password";
+        input.setAttribute("type", type);
+      });
     });
-    const closeBtn = document.querySelector("#loginModal .btn-close");
-    modal.show();
-    btn.addEventListener('click', e => modal.show())
-    closeBtn.addEventListener('click', e => modal.hide())
-
-
   }
 
-  if (document.querySelector('#changePasswordModal')) {
+  // Login Form Event
+  if (document.querySelector("#toggle-login")) {
+    document.getElementById("btn-register").addEventListener("click", () => {
+      document.getElementById("login").classList.add("d-none");
+      document.getElementById("register").classList.remove("d-none");
+    });
+    document.getElementById("btn-login").addEventListener("click", () => {
+      document.getElementById("register").classList.add("d-none");
+      document.getElementById("login").classList.remove("d-none");
+    });
+  }
+
+  if (document.querySelector("#loginBtn")) {
+    const btn = document.querySelector("#loginBtn");
+    const modal = new bootstrap.Modal("#loginModal", {
+      backdrop: "static",
+      focus: true,
+      keyboard: false,
+    });
+    const closeBtn = document.querySelectorAll("#loginModal .btn-close");
+    btn.addEventListener("click", (e) => modal.show());
+    closeBtn.forEach((btn) => {
+      btn.addEventListener("click", (e) => modal.hide());
+    });
+  }
+
+  document.querySelector("#loginModal").addEventListener("hidden.bs.modal", () => {
+    document.getElementById("login").classList.remove("d-none");
+    document.getElementById("register").classList.add("d-none");
+  });
+
+
+  // Personal Data 
+  if (document.querySelector("#changePasswordModal")) {
     const changePassWordBtn = document.querySelector("#changePassword");
-    const changePassWordCloseBtn = document.querySelector("#changePasswordModal .btn-close");
-    const changePassWordModal = new bootstrap.Modal('#changePasswordModal', {
-      backdrop: 'static',
+    const changePassWordCloseBtn = document.querySelector(
+      "#changePasswordModal .btn-close"
+    );
+    const changePassWordModal = new bootstrap.Modal("#changePasswordModal", {
+      backdrop: "static",
       focus: true,
       keyboard: false,
     });
 
-    changePassWordBtn.addEventListener("click", e => {
+    changePassWordBtn.addEventListener("click", (e) => {
       changePassWordModal.show();
-    })
+    });
 
-    changePassWordCloseBtn.addEventListener('click', e => changePassWordModal.hide())
+    changePassWordCloseBtn.addEventListener("click", (e) =>
+      changePassWordModal.hide()
+    );
   }
 
-
-  document.addEventListener('click', e => {
-    const item = e.target.closest('.dropdown-item');
+  document.addEventListener("click", (e) => {
+    const item = e.target.closest(".dropdown-item");
     if (item) {
       e.preventDefault();
-      const selectedOption = item.getAttribute('data-option');
-      const dropdownButton = item.closest('.dropdown').querySelector('.dropdown-toggle');
+      const selectedOption = item.getAttribute("data-option");
+      const dropdownButton = item
+        .closest(".dropdown")
+        .querySelector(".dropdown-toggle");
       if (dropdownButton) {
         dropdownButton.textContent = selectedOption;
       }
@@ -60,18 +96,18 @@ document.addEventListener('DOMContentLoaded', () => {
       loop: true,
       autoplay: {
         delay: 5000,
-        disableOnInteraction: true
+        disableOnInteraction: true,
       },
       breakpoints: {
         992: {
           slidesPerView: 2.85,
-          spaceBetween: 24
-        }
+          spaceBetween: 24,
+        },
       },
       on: {
         // init: setSwiperCardHeight(_div),
         // slideChange: setSwiperCardHeight(_div),
-      }
+      },
     });
     // window.addEventListener('resize', setSwiperCardHeight(_div));
     // window.addEventListener('load', setSwiperCardHeight(_div));
@@ -85,67 +121,67 @@ document.addEventListener('DOMContentLoaded', () => {
       breakpoints: {
         768: {
           slidesPerView: 2,
-          spaceBetween: 24
+          spaceBetween: 24,
         },
         992: {
           slidesPerView: 3,
-          spaceBetween: 24
+          spaceBetween: 24,
         },
         1200: {
           slidesPerView: 4,
-          spaceBetween: 24
-        }
+          spaceBetween: 24,
+        },
       },
       on: {
         // init: setSwiperCardHeight(_div),
         // slideChange: setSwiperCardHeight(_div),
-      } 
-    })
+      },
+    });
     // window.addEventListener('resize', setSwiperCardHeight(_div));
     // window.addEventListener('load', setSwiperCardHeight(_div));
   }
 
   if (document.querySelector("#about")) {
-		const _div = document.querySelector("#about");
-		const swiper = new Swiper("#about .swiper", {
-			slidesPerView: 1.2,
-			spaceBetween: 24,
-			loop: false,
-			autoplay: {
-				delay: 30000,
-				disableOnInteraction: true,
-			},
-			breakpoints: {
-				768: {
-					slidesPerView: 2.8,
-					spaceBetween: 24,
-				},
-				992: {
-					slidesPerView: 3.8,
-					spaceBetween: 24,
-				},
-				1200: {
-					slidesPerView: 4.8,
-					spaceBetween: 24,
-				},
-			},
-			on: {
-				// init: setSwiperCardHeight(_div),
-				// slideChange: setSwiperCardHeight(_div),
-			},
-		});
-		// window.addEventListener('resize', setSwiperCardHeight(_div));
-		// window.addEventListener('load', setSwiperCardHeight(_div));
-	}
+    const _div = document.querySelector("#about");
+    const swiper = new Swiper("#about .swiper", {
+      slidesPerView: 1.2,
+      spaceBetween: 24,
+      loop: false,
+      autoplay: {
+        delay: 30000,
+        disableOnInteraction: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2.8,
+          spaceBetween: 24,
+        },
+        992: {
+          slidesPerView: 3.8,
+          spaceBetween: 24,
+        },
+        1200: {
+          slidesPerView: 4.8,
+          spaceBetween: 24,
+        },
+      },
+      on: {
+        // init: setSwiperCardHeight(_div),
+        // slideChange: setSwiperCardHeight(_div),
+      },
+    });
+    // window.addEventListener('resize', setSwiperCardHeight(_div));
+    // window.addEventListener('load', setSwiperCardHeight(_div));
+  }
 
   function setSwiperCardHeight(div) {
     // console.log(div)
-    const slides = div.querySelectorAll('.swiper-slide > div');
+    const slides = div.querySelectorAll(".swiper-slide > div");
     let maxHeight = 0;
 
     // 重置高度以計算真實內容高度
-    slides.forEach(slide => {
-      slide.style.height = 'auto';
+    slides.forEach((slide) => {
+      slide.style.height = "auto";
       const slideHeight = slide.offsetHeight;
       if (slideHeight > maxHeight) {
         maxHeight = slideHeight;
@@ -153,9 +189,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 將最大高度應用到所有卡片
-    slides.forEach(slide => {
+    slides.forEach((slide) => {
       slide.style.height = `${maxHeight}px`;
     });
   }
-
-})
+});
