@@ -1,12 +1,20 @@
 import * as bootstrap from "bootstrap";
 // import { Modal } from 'bootstrap';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
 import "./assets/scss/all.scss";
-
 document.addEventListener("DOMContentLoaded", () => {
+  AOS.init({
+    offset: 0
+  });
+  AOS.refresh();
+
+  // console.log(AOS)
 
   if (document.querySelectorAll(".show-password").length > 0) {
     const btns = document.querySelectorAll(".show-password");
@@ -91,26 +99,19 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector("#home-story")) {
     const _div = document.querySelector("#home-story");
     const swiper = new Swiper("#home-story .swiper", {
-      slidesPerView: 1.05,
+      slidesPerView: "auto",
       spaceBetween: 16,
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-      },
+      loop: false,
+      // autoplay: {
+      //   delay: 10000,
+      //   disableOnInteraction: true,
+      // },
       breakpoints: {
         992: {
-          slidesPerView: 2.85,
           spaceBetween: 24,
         },
       },
-      on: {
-        // init: setSwiperCardHeight(_div),
-        // slideChange: setSwiperCardHeight(_div),
-      },
     });
-    // window.addEventListener('resize', setSwiperCardHeight(_div));
-    // window.addEventListener('load', setSwiperCardHeight(_div));
   }
 
   if (document.querySelector("#home-service")) {
@@ -132,13 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
           spaceBetween: 24,
         },
       },
-      on: {
-        // init: setSwiperCardHeight(_div),
-        // slideChange: setSwiperCardHeight(_div),
-      },
     });
-    // window.addEventListener('resize', setSwiperCardHeight(_div));
-    // window.addEventListener('load', setSwiperCardHeight(_div));
   }
 
   if (document.querySelector("#about")) {
@@ -147,10 +142,10 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesPerView: 1.2,
       spaceBetween: 24,
       loop: false,
-      autoplay: {
-        delay: 30000,
-        disableOnInteraction: true,
-      },
+      // autoplay: {
+      //   delay: 30000,
+      //   disableOnInteraction: true,
+      // },
       breakpoints: {
         768: {
           slidesPerView: 2.8,
@@ -165,32 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
           spaceBetween: 24,
         },
       },
-      on: {
-        // init: setSwiperCardHeight(_div),
-        // slideChange: setSwiperCardHeight(_div),
-      },
-    });
-    // window.addEventListener('resize', setSwiperCardHeight(_div));
-    // window.addEventListener('load', setSwiperCardHeight(_div));
-  }
-
-  function setSwiperCardHeight(div) {
-    // console.log(div)
-    const slides = div.querySelectorAll(".swiper-slide > div");
-    let maxHeight = 0;
-
-    // 重置高度以計算真實內容高度
-    slides.forEach((slide) => {
-      slide.style.height = "auto";
-      const slideHeight = slide.offsetHeight;
-      if (slideHeight > maxHeight) {
-        maxHeight = slideHeight;
-      }
-    });
-
-    // 將最大高度應用到所有卡片
-    slides.forEach((slide) => {
-      slide.style.height = `${maxHeight}px`;
     });
   }
 });
+

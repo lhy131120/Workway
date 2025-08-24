@@ -556,9 +556,12 @@ form {
 
 // hero
 .hero {
-	aspect-ratio: 1920 / 320;
-	background: url("/assets/images/service/banner-bg.png") repeat-x center center;
-
+	min-height: 254px;   
+	background: url("/assets/images/service/banner-bg.png") repeat center center / contain;
+	
+	@media (min-width: 1024px) {
+		min-height: 320px;
+	}
 	.hero-deco {
 		display: none;
 		@media (min-width: 1024px) {
