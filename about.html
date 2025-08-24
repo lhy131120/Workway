@@ -6,11 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/x-icon" href="/Workway/assets/favicon-VQbgFjcT.png" />
 		<title>關於職旅</title>
-		<script type="module" crossorigin src="/Workway/assets/main-Cu1zv_ny.js"></script>
-		<link rel="stylesheet" crossorigin href="/Workway/assets/main-C10gds1z.css">
+		<script type="module" crossorigin src="/Workway/assets/main-BczPGTOo.js"></script>
+		<link rel="stylesheet" crossorigin href="/Workway/assets/main-_N2NkHYm.css">
 	</head>
 	<body>
-		<header class="border-bottom border-natural-85">
+		<header id="header" class="border-bottom border-natural-85">
   <nav class="navbar bg-light navbar-expand-lg fixed-top">
     <div class="container">
       <h1 class="mb-0 lh-0">
@@ -157,7 +157,7 @@
     </div>
   </div>
 </div>		<main>
-			<section class="hero mw-100 position-relative py-9 py-lg-12 d-flex justify-content-center align-items-center">
+      <section class="hero mw-100 position-relative">
 				<img
 					class="img-fluid position-absolute top-0 end-0 hero-deco"
 					src="data:image/png;base64,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"
@@ -168,18 +168,17 @@
 					src="data:image/png;base64,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"
 					alt="hero-deco"
 				/>
-				<div class="z-2 position-relative container">
+				<div class="z-2 position-relative container py-9 py-lg-12">
 					<div class="row justify-content-center">
 						<div class="col-lg-8">
 							<img
 								src="/Workway/assets/banner-person-A1QYvJ0x.svg"
-								class="img-fluid position-absolute bottom-n13 end-128 hero-deco"
+								class="img-fluid position-absolute bottom-n8 end-128 hero-deco"
 								alt="hero-deco"
 							/>
 							<h2 class="text-center fs-2 fs-lg-1 mb-6 mb-lg-9 fw-bold">關於職旅</h2>
 							<p class="text-center mb-0 fs-7 fs-lg-6 text-natural-50">
-								職旅 WorkWay
-								匯集了來自不同領域、擁有豐富實戰經驗的自由工作者與數位遊牧專家。根據你的需求和階段，我們提供一對一諮詢。
+								職旅 WorkWay匯集了來自不同領域、擁有豐富實戰經驗的自由工作者與數位遊牧專家。根據你的需求和階段，我們提供一對一諮詢。
 							</p>
 							<p class="text-center mb-0 fs-7 fs-lg-6 text-natural-50">
 								無論你是剛開始探索期，還是已在轉型路上遇到瓶頸，我們都能提供適合你的專業指導。
@@ -329,12 +328,13 @@
                     </div>
                   </div>
                 </div>
+                
               </div>
             </div>
 					</div>
 					<div class="row">
 						<div class="col">
-							<div
+							<div data-aos="fade-up" data-aos-duration="500"
 								class="rounded-5 pt-4 pt-lg-6 pb-6 pb-lg-9 px-6 px-lg-9 bg-primary-60 d-flex flex-column gap-6 gap-lg-9"
 							>
 								<div>
@@ -374,8 +374,8 @@
 
 			<section class="py-9 py-lg-12 position-relative bg-natural-95">
 				<div class="container">
-					<h3 class="text-center mb-6 mb-lg-9 fs-3 fs-lg-2 fw-bold">公司資訊</h3>
-					<div class="rounded-5 p-6 p-lg-9 common-shadow-sm position-relative z-2 bg-light">
+					<h3 data-aos="fade-up" data-aos-duration="500" class="text-center mb-6 mb-lg-9 fs-3 fs-lg-2 fw-bold">公司資訊</h3>
+					<div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" class="rounded-5 p-6 p-lg-9 common-shadow-sm position-relative z-2 bg-light">
 						<table class="table table-light mb-6 mb-lg-9">
 							<thead class="d-none"></thead>
 							<tbody>
@@ -411,7 +411,7 @@
 				<div class="d-none d-lg-block w-100 position-absolute bottom-0 start-0 z-1 bg-light" style="height: 280px;"></div>
 			</section>
 		</main>
-		<section class="py-8">
+		<section data-aos="fade-up" class="py-8">
   <div class="container">
     <div class="row">
       <div class="col">
